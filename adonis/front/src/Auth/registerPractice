@@ -1,0 +1,88 @@
+import React from 'react';
+
+'     {}     d      =
+
+class register extends Component {
+    
+    constructor() {
+        super();
+        this.state = {
+            username: ''
+            email: '',
+            password:''
+        }
+
+        this.changeHandler = this.changeHandler.bind(this);
+        this.submitHandler = this.submitHandler.bind(this);
+    }
+
+    changeHandler (e) {
+        this.setState([e.target.name]:e.target.value)
+    }
+    
+    submitHandler(e){
+        e.preventDefault();
+
+        const newUser  = {
+            username: this.state.username,
+            email: this.state.email,
+            password: this.state.password
+        }
+        
+        axios.post(url, newUser).then(res  => {
+            alert(.......)
+        })
+
+    }
+
+
+
+
+    const [user, setUser] = useState({
+        username: 
+        email: email,
+        password: password
+    }) 
+
+    const changeHandler = (e) => {
+        const name = e.target.name,
+        const value = e.target.value
+
+        setUser((preValue) => {
+            return {
+                ...preValue,
+                [name]:value
+            }
+        })
+    }
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+        axios.post('/url', user).then(res => {
+            alert('successfully submited')
+        } ).catch(err => {
+            console.log(err)
+        })
+    }
+
+    render() {
+        const [username, email, password] = this.state
+        return (
+        <>
+           <div>
+                <form onSubmit={submitHandler}>
+                    <input name= 'username' value={username} onChange={changeHandler}/>
+                     <input name= 'email' value={user.email} onChange={changeHandler}/>
+                      <input name= 'password' value={user.password} onChange={changeHandler}/>
+                      <button type='submit'> Submit</button>
+                </form>
+           
+           </div> 
+        </>
+    )
+    }
+    
+}
+
+export  default register;

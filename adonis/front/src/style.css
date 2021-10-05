@@ -1,0 +1,28 @@
+body {
+    background-color: lavender;
+}
+
+.turnoff {
+    display: none;
+}
+
+.shadowTxt {
+    text-shadow: 5px 5px 5px lightgreen;
+}
+
+.apply{
+    padding: 12px;
+    background-color: aqua;
+    width: 250px;
+    font-size: 21px;  
+}
+
+
+
+.apply2{
+    padding: 12px;
+    background-color:yellow;
+    width: 200px;
+    margin-left: 60%;
+    font-size: 21px;
+}
